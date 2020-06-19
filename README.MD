@@ -88,7 +88,7 @@ Can find good PWA score by Lighthouse in chrome
 
 1. app.ft.com
 
-## Manifest
+# App Manifest
 
 Add a reference to the manifest.json file for the pages that are the PWA
 
@@ -106,6 +106,21 @@ Add a reference to the manifest.json file for the pages that are the PWA
 - icons : configure icons for homescreen for different devices
 - related_applications : reference native apps allowing the device to inform the user
 
-## Service workers
+# Service workers
 
-1. 
+- Code that listens to specific events
+- Runs in the background
+- Lives on after pages, or browser, have been closed
+- Run on separate thread to JS
+- Decoupled from HTML pages
+- Manages *all* pages of given scope (e.g. all pages of a domain)
+
+### Listenable Events
+
+| Event | Source |
+| -- | -- |
+| Fetch | Browser or Page-related JavaScript initiates a Fetch (http request) |
+| Push Notification | Service Worker recieves Web Push Notification (from Server) |
+| Notification Interaction | User interacts with displayed notification (handled by Service Worker as your app may not be open) |
+| Background Sync | Service Worker recieves Background Sync Event (e.g. Internet Connection was restored) |
+| Service Worker Lifecycle | Service Worker Phase changes |
