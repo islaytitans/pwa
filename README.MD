@@ -114,6 +114,7 @@ Add a reference to the manifest.json file for the pages that are the PWA
 - Run on separate thread to JS
 - Decoupled from HTML pages
 - Manages *all* pages of given scope (e.g. all pages of a domain)
+    - scope is defined by the folder the service worker js file is in
 
 ### Listenable Events
 
