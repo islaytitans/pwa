@@ -110,11 +110,14 @@ Add a reference to the manifest.json file for the pages that are the PWA
 
 - Code that listens to specific events
 - Runs in the background
+- Only runs on https
 - Lives on after pages, or browser, have been closed
 - Run on separate thread to JS
 - Decoupled from HTML pages
-- Manages *all* pages of given scope (e.g. all pages of a domain)
-    - scope is defined by the folder the service worker js file is in
+- Manages *all* pages of given scope (e.g. all pages of a domain). Scope can be defined
+    - by the folder the service worker js file is in
+    - an argument when you register the service worker
+
 
 ### Listenable Events
 
